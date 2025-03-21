@@ -2,6 +2,8 @@ import { useState } from "react"
 import "./styles.css"
 import { NewTodoForm } from "./NewTodoForm"
 import { TodoList } from "./TodoList"
+import { NavBar } from "./navBar"
+import { FileUploader } from "./FileUploader"
 
 export default function App() {
   const [todos, setTodos] = useState([])
@@ -35,9 +37,14 @@ export default function App() {
 
   return (
     <>
-      <NewTodoForm onSubmit={addTodo} />
+    <header className="text-3xl text-white font-semibold p-7 bg-stone-600">Loader</header>
+    <div className="h-screen bg-stone-500">
+      <FileUploader />
+      {/*<NavBar />*/}
+      {/*<NewTodoForm onSubmit={addTodo} />
       <h1 className="header">Todo List</h1>
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />*/}
+    </div>
     </>
   )
 }
